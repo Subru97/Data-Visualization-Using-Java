@@ -2,9 +2,7 @@ package fr.epita.titanic.launcher;
 
 import java.awt.Color;
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.knowm.xchart.PieChart;
 import org.knowm.xchart.PieChartBuilder;
