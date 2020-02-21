@@ -20,24 +20,22 @@ public class Chart3 implements ExampleChart<CategoryChart> {
 	    	if(row.get(0) == 1) {
 	    		if (row.get(3) < 18) {
 	    			survivedAgeGroup.set(0, (int) survivedAgeGroup.get(0) + 1);
-				} else if (18 < row.get(3) && row.get(3) < 60) {
+				} else if (18 <= row.get(3) && row.get(3) < 60) {
 					survivedAgeGroup.set(1, (int) survivedAgeGroup.get(1) + 1);
-				} else if (row.get(3) > 60) {
+				} else if (row.get(3) >= 60) {
 					survivedAgeGroup.set(2, (int) survivedAgeGroup.get(2) + 1);
 				}
 	    	} else {
-	    		if (row.get(2) == 1) {
+	    		if (row.get(3) < 18) {
 	    			deadAgeGroup.set(0, (int) deadAgeGroup.get(0) + 1);
-				} else if (18 < row.get(3) && row.get(3) < 60) {
+				} else if (18 <= row.get(3) && row.get(3) < 60) {
 					deadAgeGroup.set(1, (int) deadAgeGroup.get(1) + 1);
-				} else if (row.get(3) > 60) {
-					deadAgeGroup.set(1, (int) deadAgeGroup.get(2) + 1);
+				} else if (row.get(3) >= 60) {
+					deadAgeGroup.set(2, (int) deadAgeGroup.get(2) + 1);
 				}
 	    	}
 		});
-	    
-//	    System.out.println(survivedMenAndWomen);
-	    
+	    	    
 	    ExampleChart<CategoryChart> eChart3 = new Chart3();
 	    CategoryChart cchart3 = eChart3.getChart();
 	    new SwingWrapper<CategoryChart>(cchart3).displayChart();

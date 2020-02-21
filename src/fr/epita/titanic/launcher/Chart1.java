@@ -50,7 +50,7 @@ public class Chart1 implements ExampleChart<CategoryChart> {
 	@Override
 	public CategoryChart getChart() {
 		// Create Chart
-	    CategoryChart chart = new CategoryChartBuilder().width(800).height(600).title("Survivors in each pclass").xAxisTitle("Pclass").yAxisTitle("Number of people").build();
+	    CategoryChart chart = new CategoryChartBuilder().width(800).height(600).title("Survivors in each passenger class").xAxisTitle("Passenger class").yAxisTitle("Number of people").build();
 
 	    // Customize Chart
 	    chart.getStyler().setLegendPosition(LegendPosition.InsideNW);

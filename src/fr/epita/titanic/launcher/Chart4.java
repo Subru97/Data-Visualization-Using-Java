@@ -42,7 +42,7 @@ public class Chart4 implements ExampleChart<PieChart> {
 	    // Series
 	    
 	    fareCollectionOfClasses.forEach((key, value) -> {
-	    	chart.addSeries("Fare collection in class " + String.valueOf(key.intValue()), value);
+	    	chart.addSeries("Fare collected in class " + String.valueOf(key.intValue()), value);
 	    });
 	
 	    return chart;
